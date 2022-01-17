@@ -10,20 +10,20 @@ int main() {
 		double A; cin >> A;
 		double B; cin >> B;
 		double C; cin >> C;
-
-		int T;
-        cin >> T;
-        float n[3];
-        // receive all elements of array
-        for (int i=0; i<3; i++) {
-        cin >>n[i];
+        unsigned int Ax;
+        char s[64],s2[64];
+        sprintf(s,"%fA",A);
+        Ax= atof(s);
+        printf("%#0x\n", Ax);
+        sprintf(s2,"%+15.2f",B);
+        for (int i =0; i<15;i++){
+            if (s2[i]==' '){
+                s2[i]='_';
+            }
         }
-        int i;
-        float n_new[3];
-        switch (i){
-            case 1:
-                n_new[0]=n[0] ;
-        }
-    
-        }
+        printf("%s\n",s2);
+        printf("%.9E\n",C);
 	}
+	return 0;
+
+}
