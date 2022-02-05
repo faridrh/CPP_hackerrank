@@ -10,11 +10,14 @@ int main() {
 		double A; cin >> A;
 		double B; cin >> B;
 		double C; cin >> C;
-        unsigned int Ax;
-        char s[64],s2[64];
+        unsigned long  Ax;
+        char s[32],s2[32];
         sprintf(s,"%fA",A);
         Ax= atof(s);
-        printf("%#0x\n", Ax);
+       cout.setf ( ios::showbase ); 
+       cout.unsetf(ios::uppercase);
+        cout << setw(0xf)<<left;
+        cout <<hex<<Ax<< endl;
         sprintf(s2,"%+15.2f",B);
         for (int i =0; i<15;i++){
             if (s2[i]==' '){
